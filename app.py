@@ -12,3 +12,10 @@ if hist_button:
     st.write('Creación de un histograma para el conjunto de datos de precios de venta de coches')
     fig = px.histogram(data, x="price")
     st.plotly_chart(fig, use_container_width=True)
+
+build_histogram = st.checkbox('Construir un histograma')
+
+if build_histogram: 
+    st.write('Construir un histograma para la columna odómetro')
+    fig = px.scatter(data, x="model_year", y="price")
+    fig.show()
