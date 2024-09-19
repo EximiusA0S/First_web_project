@@ -15,8 +15,14 @@ if hist_button:
 
 build_histogram = st.checkbox('Construir un histograma')
 
-if build_histogram: 
+if build_histogram:
     st.write('Construir un histograma para la columna modelos de año con precio')
-    fig = px.scatter(data, x="model_year", y="price")
-    st.plotly_chart()
     
+
+    if 'model_year' in data.columns and 'price' in data.columns:
+        fig = px.scatter(data, x="model_year", y="price")
+        st.plotly_chart(fig)  
+    else:
+        st.write("Error: Las columnas 'model_year' y 'price' no están en el DataFrame.")
+
+
