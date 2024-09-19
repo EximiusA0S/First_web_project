@@ -13,10 +13,10 @@ if hist_button:
     fig = px.histogram(data, x="price")
     st.plotly_chart(fig, use_container_width=True)
 
-build_histogram = st.checkbox('Construir un histograma')
+build_histogram = st.checkbox('Construir un gráfico de dispersión')
 
 if build_histogram:
-    st.write('Construir un histograma para la columna modelos de año con precio')
+    st.write('Construir un gráfico de dispersión para la columna modelos de año con precio')
     
 
     if 'model_year' in data.columns and 'price' in data.columns:
