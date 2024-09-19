@@ -18,4 +18,5 @@ build_histogram = st.checkbox('Construir un histograma')
 if build_histogram: 
     st.write('Construir un histograma para la columna modelos de año con precio')
     fig = px.scatter(data, x="model_year", y="price")
-    fig.show()
+    st.plotly_chart()
+    
