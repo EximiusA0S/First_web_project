@@ -4,7 +4,7 @@ import plotly_express as px
 
 st.header('¡Bienvenido a mi primera aplicación web!')
 
-data = pd.read_csv("/Users/luisarochi/Desktop/First_web_project/vehicles_us.csv")
+data = pd.read_csv("vehicles_us.csv")
  
 hist_button = st.button('Construir histograma')
 
